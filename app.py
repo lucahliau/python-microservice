@@ -17,7 +17,8 @@ class CalculatePreferencesRequest(BaseModel):
 class RecommendRequest(BaseModel):
     likedClusters: List[List[float]]
     dislikedClusters: List[List[float]] = []
-    posts: List[dict]  # posts as dictionaries (include at least id, description/product_description, etc.)
+    # Each post should include at least an 'id', an 'embedding', and optionally a 'description'
+    posts: List[dict]
 
 # ----------------------------
 # Endpoints
